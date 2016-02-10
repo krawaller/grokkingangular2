@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Angular 2 app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../_libs/bootstrap.3.3.6.min.css">
+        
+    <!-- IE required polyfills, in this exact order -->
+    <script src="../_libs/es6shim.0.33.3.min.js"></script>
+    <script src="../_libs/systemjs.polyfill.0.19.16.min.js"></script>
+    
+    <script src="../_libs/angular2.polyfills.2.0.0.beta3.js"></script>
+    <script src="../_libs/systemjs.0.19.6.min.js"></script>
+    <script src="../_libs/typescript.1.7.3.js"></script>
+    <script src="../_libs/rx.js"></script>
+    <script src="../_libs/angular2.dev.2.0.0.beta3.js"></script>
+    <script>
+      System.config({
+        transpiler: 'typescript', 
+        typescriptOptions: { emitDecoratorMetadata: true }, 
+        packages: {'app': {defaultExtension: 'ts'}} 
+      });
+      System.import('app/main')
+            .then(null, console.error.bind(console));
+    </script>
+
+  </head>
+
+  <!-- 3. Display the application -->
+  <body>
+    <minitest class="container" style="display: block">Loading...</minitest>
+  </body>
+
+</html>
+
+<!-- 
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
